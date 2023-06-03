@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CONTACTS_ROUTE, MAIN_ROUTE, MENU_ROUTE, NEWS_ROUTE } from '../../const';
 import logo from '../../img/logotip.webp';
 import './Header.css';
+import Modal from '../ModalReserve/Modal';
+import ModalOrder from '../ModalOrder/ModalOrder';
 
 const Header = () => {
+
+    const [modalActive, setModalActive] = useState(false)
+    const [modalOrderActive, setModalOrderActive] = useState(false)
+
     return (
         <div>
             <header>
@@ -18,9 +24,13 @@ const Header = () => {
                     <NavLink to={NEWS_ROUTE}>Новости</NavLink>
                     <NavLink to={MENU_ROUTE}>Меню</NavLink>
                     <NavLink to={CONTACTS_ROUTE}>Контакты</NavLink>
+                    <NavLink onClick={() => setModalOrderActive(true)}>Заказать онлайн</NavLink>
+                    <button className='btnHeader' onClick={() => setModalActive(true)}>Забронировать место</button>
                 </nav>
                 </div>
             </header>
+            <Modal active={modalActive} setActive={setModalActive} />
+            <ModalOrder active={modalOrderActive} setActive={setModalOrderActive} />
         </div>
     );
 };

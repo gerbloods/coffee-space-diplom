@@ -16,6 +16,7 @@
 .drinks__text {
     padding: 40px 150px 10px 150px;
     font-size: 26px;
+    color: #fafafa;
 }
 .drinks {
     padding: 0 200px;
@@ -35,22 +36,29 @@
 }
 .name__snacks {
     font-size: 34px;
+    color: #fafafa;
 }
 .description__snacks {
     font-size: 22px;
+    color: #fafafa;
 }
 .price__snacks {
     font-size: 22px;
+    color: #fafafa;
 }
 .name__drink {
     font-size: 34px;
+    color: #fafafa;
 }
 .description__drink {
     font-size: 22px;
+    color: #fafafa;
 }
 .ml__drink {
     font-size: 18px;
+    color: #fafafa;
 }
 .price__drink {
     font-size: 22px;
+    color: #fafafa;
 }

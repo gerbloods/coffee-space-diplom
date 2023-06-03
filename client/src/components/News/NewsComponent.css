@@ -1,0 +1,41 @@
+.main-container {
+    padding: 0 200px;
+    padding-bottom: 60px;
+}
+.newstext {
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+.newstext h1 {
+    font-size: 64px;
+}
+.header-post {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.posts p {
+    margin: 0 100px 0 100px;
+    padding: 0 200px 0 200px;
+    font-size: 26px;
+}
+.photoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 30px 30px 30px;
+}
+.photoes img {
+    margin-right: 8px;
+    max-width: 350px;
+}
+.time__div {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 375px;
+    margin-top: 10px;
+}

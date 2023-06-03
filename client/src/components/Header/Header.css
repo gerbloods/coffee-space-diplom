@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-image: url(/img/фон2.webp); */
+    margin: 0;
+    color: #fafafa;
+    font-family: Myriad-Pro-c;
+    overflow-x: hidden;
+}
+img {
+    pointer-events: none;
+    user-select: none;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: .97;
+    display: flex;
+    background-color:#363636;
+    height: 8vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px; 
+}
+.secondarynav {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header-item {
+    margin-left: 450px;
+    gap:20px;
+    padding-top: 2px;
+    position: fixed;
+    z-index: 101;
+    max-width: 70px;
+    max-height: 85px;
+    border-radius: 8px;
+}
+header a {
+    color: #CACACA;
+    font-size: 18px;
+    outline: none;
+    text-decoration: none;
+}
+header a:hover {
+    color: #848484;
+}

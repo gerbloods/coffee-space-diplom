@@ -1,0 +1,56 @@
+.main-container {
+    padding: 0 350px;
+    padding-bottom: 60px;
+}
+
+.menu__text {
+    padding-top: 200px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__text h1 {
+    font-size: 64px;
+}
+.drinks__text {
+    padding: 40px 150px 10px 150px;
+    font-size: 26px;
+}
+.drinks {
+    padding: 0 200px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.snacks {
+    padding: 0 200px;
+    padding-bottom: 5px;
+}
+.description__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.name__snacks {
+    font-size: 34px;
+}
+.description__snacks {
+    font-size: 22px;
+}
+.price__snacks {
+    font-size: 22px;
+}
+.name__drink {
+    font-size: 34px;
+}
+.description__drink {
+    font-size: 22px;
+}
+.ml__drink {
+    font-size: 18px;
+}
+.price__drink {
+    font-size: 22px;
+}

@@ -1,0 +1,29 @@
+.footer {
+    padding-top: 3px;
+    display: flex;
+    background-color:#242424;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;    
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px; 
+}
+footer p {
+    color: #CACACA;
+    font-size: 20px;
+}
+footer li {
+    list-style-type: none;
+}
+.footer > .contactnumber, .contactaddress {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navfooter * {
+    padding: 3px;
+}
+.navfooter p {
+    font-size: calc(var(--index) * .35);
+}

@@ -26,6 +26,26 @@ class OrderController {
         }
     }
 
+    async updateOrdering (req, res, next) {
+        try {
+            const { id_order } = req.body
+            if(!id_order) {
+                return next(ApiError.badRequest('Некоторые данные были введены неккоректно'))
+            } else {
+                const checkBooking = await Booking.findOne({ where: {id_order}})
+                if(checkBooking.ordering) {
+                    return next(ApiError.badRequest('Клиент уже сделал заказ'))
+                } else {
+                    await Booking.update({ordering: true}, {where: {id_order}})
+                    return res.json({ message: 'Заказ успешно сделан'})
+                }
+            }
+        } catch (error) {
+            return next(ApiError.badRequest('Что-то пошло не так :('))
+        }
+    }
+
+
     async updatePhoned (req, res, next) {
         try {
             const { id_order } = req.body

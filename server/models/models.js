@@ -20,6 +20,7 @@ const OrderGo = sequelize.define('ordergoe', {
     fio:  {type: DataTypes.STRING},
     number:  {type: DataTypes.STRING},
     order:  {type: DataTypes.STRING, defaultValue: "Информация уточняется по телефону"},
+    ordering: {type: DataTypes.BOOLEAN, defaultValue: false},
     phoned: {type: DataTypes.BOOLEAN, defaultValue: false}
 })
 

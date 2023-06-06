@@ -29,5 +29,9 @@ export const publicRoutes = [
     {
         path: NEWS_ROUTE,
         Component: News
+    },
+    {
+        path: ADMIN_PANEL,
+        Component: Admin
     }
 ] 

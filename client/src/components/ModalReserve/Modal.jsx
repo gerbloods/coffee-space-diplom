@@ -27,27 +27,27 @@ const Modal = ({active, setActive}) => {
     return (
         <div className={active ? 'modal active' : 'modal'} onClick={() => setActive(false)}>
             <div className='modal__content' onClick={e => e.stopPropagation()}>
-                <span class="reserve__text">Забронировать</span>
-                <div class="div__form">
-                    <span class="span__name">Имя и фамилия: </span>
-                    <div class="indiv__form">
-                        <input class="input__form" type="text" onChange={(e) => setFio(e.target.value)} />
+                <span className="reserve__text">Забронировать</span>
+                <div className="div__form">
+                    <span className="span__name">Имя и фамилия: </span>
+                    <div className="indiv__form">
+                        <input className="input__form" type="text" onChange={(e) => setFio(e.target.value)} />
                     </div>
                 </div>
-                <div class="div__form">
-                    <span class="span__name">Номер телефона: </span>
-                    <div class="indiv__form">
-                        <input class="input__form" type="text" onChange={(e) => setNumber(e.target.value)} />
+                <div className="div__form">
+                    <span className="span__name">Номер телефона: </span>
+                    <div className="indiv__form">
+                        <input className="input__form" type="text" onChange={(e) => setNumber(e.target.value)} />
                     </div>
                 </div>
-                <div class="div__form">
-                    <span class="span__name">Количество гостей: </span>
-                    <div class="indiv__form">
-                        <input class="input__form" type="text" onChange={(e) => setPlaces(e.target.value)} />
+                <div className="div__form">
+                    <span className="span__name">Количество гостей: </span>
+                    <div className="indiv__form">
+                        <input className="input__form" type="text" onChange={(e) => setPlaces(e.target.value)} />
                     </div>
                 </div>
-                <div class="div__form">
-                    <button type='button' class="div__button" onClick={entering}>Забронировать</button>
+                <div className="div__form">
+                    <button type='button' className="div__button" onClick={entering}>Забронировать</button>
                 </div>
             </div>
         </div>

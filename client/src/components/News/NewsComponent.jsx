@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import firstimg from '../../img/work/1.webp';
 import thirdimg from '../../img/work/3.webp';
 import './NewsComponent.css';
+import { Context } from '../..';
+import { getAllPosts } from '../../queries/mainQuery';
+import Posts from './Posts';
 
 
 const NewsComponent = () => {
+
+    const [post, setPosts] = useState([])
+    const {posts} = useContext(Context)
+
+
+    useEffect(() => {
+        getAllPosts().then((data) => {
+          setPosts(data);
+        });
+      }, [posts]);
+
     return (
         <div>
             <Header />
@@ -14,18 +28,21 @@ const NewsComponent = () => {
                 <div className="newstext">
                     <h1>Новости кофейни</h1>
                 </div>
+                <div className='posts'>
+                    {post.map((news) => (
+                        <Posts news={news} key={news.id_post} />
+                    ))}
+                </div>
                 <div className="posts">
                     <div className="header-post">
-                    <h1>Lorem</h1>
+                    <h1>Скидки!</h1>
                     </div>
                     <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, ea! Ea iure
-                    repudiandae tempora consectetur vel voluptatibus sequi cumque, unde eos
-                    fugiat explicabo quis voluptates eligendi consequatur, hic, excepturi
-                    quod?
+                    Ближайшую неделю в кофейне проходят скидки на кофе! При покупке 2 чашек латте, на выбор покупатель может выбрать
+                    что возьмет, к выбору представлены: все виды сендвичей и салатов, кофе и фреш. Акция продлится до 16 июня.
                     </p>
                     <div className="time__div">
-                    <span>xx.xx.xx</span>
+                    <span className='time'>09.06.2023</span>
                     </div>
                     <div className="photoes">
                     <img className="img" src={firstimg} alt="" />

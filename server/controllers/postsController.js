@@ -40,7 +40,6 @@ class PostController {
                 return next(ApiError.badRequest('Некоторые данные были введены неккоректно'))
             } else {
                 const photo = await createFile(file)
-                console.log(file)
                 await Posts.create({name, description, photo})
                 return res.json({ message: "Пост успешно опубликован" })
             }

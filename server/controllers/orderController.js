@@ -18,8 +18,8 @@ class OrderController {
             if(!fio || !number) {
                 return next(ApiError.badRequest('Некоторые данные были введены неккоректно'))
             } else {
-                await OrderGo.create({fio, number, order})
-                return res.json({ message: "Заказ успешно отправлен" })
+                await OrderGo.create({fio: fio, number: number, order: order})
+                return res.json({ message: "Заказ успешно создан" })
             }
         } catch (error) {
             return next(ApiError.badRequest('Что-то пошло не так :('))
@@ -28,15 +28,17 @@ class OrderController {
 
     async updateOrdering (req, res, next) {
         try {
+            console.log(req.body)
             const { id_order } = req.body
             if(!id_order) {
                 return next(ApiError.badRequest('Некоторые данные были введены неккоректно'))
             } else {
-                const checkBooking = await Booking.findOne({ where: {id_order}})
+                console.log('ddd')
+                const checkBooking = await OrderGo.findOne({ where: {id_order}})
                 if(checkBooking.ordering) {
                     return next(ApiError.badRequest('Клиент уже сделал заказ'))
                 } else {
-                    await Booking.update({ordering: true}, {where: {id_order}})
+                    await OrderGo.update({ordering: true}, {where: {id_order}})
                     return res.json({ message: 'Заказ успешно сделан'})
                 }
             }

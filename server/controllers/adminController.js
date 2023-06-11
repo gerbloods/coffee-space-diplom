@@ -18,7 +18,9 @@ class AdminController {
     }
 
     async auth (req, res, next) {
+        console.log('124')
         try {
+            console.log(req.body)
             const {admin, password} = req.body
         if(!admin || !password) {
             return next(ApiError.badRequest('Данные введены неккоректно'))

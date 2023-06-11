@@ -3,7 +3,7 @@ const router = new Router()
 const adminController = require('../controllers/adminController')
 
 router.post("/addAdmin", adminController.createAdmin)
-router.get('/checkAdmin', adminController.auth)
+router.post('/checkAdmin', adminController.auth)
 
 
 module.exports = router

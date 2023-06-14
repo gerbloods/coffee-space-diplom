@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Modal.css';
 import { reserveFunction } from '../../queries/mainQuery';
+import InputMask from 'react-input-mask';
 
 
 const Modal = ({active, setActive}) => {
@@ -9,7 +10,7 @@ const Modal = ({active, setActive}) => {
     const [number, setNumber] = useState('')
     const [places, setPlaces] = useState('')
 
-    const phoneRegex = /^((\+7|7|8)+([0-9]){10})$/;
+    const phoneRegex = /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/;
 
     const handleOrder = (fio, number, places) => {
         if (!fio || !number.match(phoneRegex) || !places) {
@@ -22,7 +23,7 @@ const Modal = ({active, setActive}) => {
 
     const entering = async () => {
             try {
-                if(handleOrder(fio, number, places) == true) {
+                if(handleOrder(fio, number, places) === true) {
                     const object = await reserveFunction(fio, number, places)
                     setActive(false)
                     alert(object.message)
@@ -50,7 +51,7 @@ const Modal = ({active, setActive}) => {
                 <div className="div__form">
                     <span className="span__name">Номер телефона: </span>
                     <div className="indiv__form">
-                        <input className="input__form" type="text" onChange={(e) => setNumber(e.target.value)} />
+                        <InputMask className="input__form" mask="+7 (999) 999-99-99"  onChange={(e) => setNumber(e.target.value)} />
                     </div>
                 </div>
                 <div className="div__form">

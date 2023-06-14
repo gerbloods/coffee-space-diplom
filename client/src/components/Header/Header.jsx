@@ -20,7 +20,7 @@ const Header = () => {
                 <div className="header">
                 <nav className="secondarynav">
                     <NavLink to={MAIN_ROUTE}>Главная</NavLink>
-                    <NavLink to={MAIN_ROUTE}>О нас</NavLink>
+                    {/* <NavLink to={MAIN_ROUTE}>О нас</NavLink> */}
                     <NavLink to={NEWS_ROUTE}>Новости</NavLink>
                     <NavLink to={MENU_ROUTE}>Меню</NavLink>
                     <NavLink to={CONTACTS_ROUTE}>Контакты</NavLink>

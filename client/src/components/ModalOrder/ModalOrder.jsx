@@ -10,18 +10,31 @@ const ModalOrder = ({active, setActive}) => {
     const [order, setOrder] = useState('')
 
 
+    const phoneRegex = /^((\+7|7|8)+([0-9]){10})$/;
+
+    const handleOrder = (fio, number, order) => {
+        if (!fio || !number.match(phoneRegex) || !order) {
+            alert("Пожалуйста, заполните корректно все обязательные поля");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     const entering = async () => {
         try {
-            const object = await orderFunction(fio, number, order)
-            setActive(false)
-            console.log(object.message)
-            return (
-                <div className='messageDiv'>
-                    <span className='textMessage'>{object.message}</span>
-                </div>
-            )
+            if(handleOrder(fio, number, order) == true) {
+                const object = await orderFunction(fio, number, order)
+                setActive(false)
+                alert(object.message)
+                return (
+                    <div className='messageDiv'>
+                        <span className='textMessage'>{object.message}</span>
+                    </div>
+                )
+            } 
         } catch (error) {
-            console.log(error)
+            alert('Неправильное заполнение данных')
         }
     }
 

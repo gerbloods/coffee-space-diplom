@@ -7,7 +7,7 @@ const { Posts } = require('../models/models')
 
 const createFile = async (file) => {
 	const fileName = uuid.v4() + '.jpg'
-	file.mv(path.resolve(__dirname, 'static', fileName))
+	file.mv(path.resolve(__dirname, '..', 'static', fileName))
 	return(fileName)
 }
 

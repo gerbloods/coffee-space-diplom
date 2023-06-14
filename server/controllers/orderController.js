@@ -1,3 +1,4 @@
+const { where } = require('sequelize')
 const sequelize = require('../db')
 const ApiError = require('../error/apiError')
 const { OrderGo } = require('../models/models')

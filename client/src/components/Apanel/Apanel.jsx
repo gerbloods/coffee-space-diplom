@@ -1,8 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import './Apanel.css';
-import { addPostFunction, authFunction, updateBookingFunction, updateOrderingFunction, updatePhonedFunction, updatePhonedOrderFunction } from '../../queries/mainQuery';
+import { addPostFunction, authFunction, getBookingFunction, getOrderFunction, updateBookingFunction, updateOrderingFunction, updatePhonedFunction, updatePhonedOrderFunction } from '../../queries/mainQuery';
 import { Context } from '../..';
+import { useNavigate } from 'react-router-dom';
+import { ADMIN_PANEL } from '../../const';
+import Bookings from './Bookings';
+import Orders from './Orders';
+
 
 const Apanel = () => {
 
@@ -17,7 +22,7 @@ const Apanel = () => {
     const [password, setPassword] = useState('')
 
     const { user } = useContext(Context)
-    
+    const navigate = useNavigate()    
 
 
     const formAuth = async () => {
@@ -25,71 +30,66 @@ const Apanel = () => {
             const object = await authFunction(login, password)
             if (object) {
                 user.setIsAuth(true)
-                console.log(user._isAuth)
+                navigate(ADMIN_PANEL)
             }
-            return (
-                <div className='messageDiv'>
-                    <span className='textMessage'>{object.message}</span>
-                </div>
-                )
         } catch (e) {
-            console.log(e)
+            alert('Неправильное заполнение данных')
         }
     }
 
     const formReservePhoned = async () => {
         try {
             const object = await updatePhonedFunction(reservePhoned)
-            console.log(object.message)
+            alert(object.message)
             return (
                 <div className='messageDiv'>
                     <span className='textMessage'>{object.message}</span>
                 </div>
                 )
         } catch (e) {
-            console.log(e)
+            alert('Неправильное заполнение данных')
         }
     }
 
     const formEnterReserve = async () => {
         try {
             const object = await updateBookingFunction(enterReserve)
-            console.log(object.message)
+            alert(object.message)
             return (
                 <div className='messageDiv'>
                     <span className='textMessage'>{object.message}</span>
                 </div>
                 )
         } catch (e) {
-            console.log(e)
+            alert('Неправильное заполнение данных')
         }
     }
 
     const formOrderPhoned = async () => {
         try {
             const object = await updatePhonedOrderFunction(orderPhoned)
-            console.log(object.message)
+            alert(object.message)
             return (
                 <div className='messageDiv'>
                     <span className='textMessage'>{object.message}</span>
                 </div>
                 )
         } catch (e) {
-            console.log(e)
+            alert('Неправильное заполнение данных')
         }
     }
 
     const formOrdering = async () => {
         try {
             const object = await updateOrderingFunction(enterOrder)
-            console.log(object.message)
+            alert(object.message)
             return (
                 <div className='messageDiv'>
                     <span className='textMessage'>{object.message}</span>
                 </div>
                 )
         } catch (e) {
-            console.log(e)
+            alert('Неправильное заполнение данных')
         }
     }
 
@@ -104,12 +104,33 @@ const Apanel = () => {
             formdata.append("description", descriptionPost)
             formdata.append("file", photoPost)
             const object = await addPostFunction(formdata)
-            console.log(object.message)
+            alert(object.message)
         } catch (e) {
-            console.log(e)
+            alert('Неправильное заполнение данных')
         }
 
     }
+
+    const [booking, setBooking] = useState([])
+    const {bookings} = useContext(Context)
+
+
+    useEffect(() => {
+        getBookingFunction().then((data) => {
+          setBooking(data);
+        });
+      }, [bookings]);
+
+    const [order, setOrder] = useState([])
+    const {orders} = useContext(Context)
+
+
+    useEffect(() => {
+        getOrderFunction().then((data) => {
+          setOrder(data);
+        });
+      }, [orders]);
+
 
     return (
         <div>
@@ -220,16 +241,23 @@ const Apanel = () => {
                     </div>
                     <div className="space" />
                     <div className="info__sector">
-                        <div className="info__booking">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus sed,
-                        amet provident facere laborum omnis in aut excepturi asperiores sapiente
-                        voluptatibus ab sint commodi labore ipsam eveniet! Itaque, necessitatibus
-                        totam.
-                        </div>
+                            <div className="info__booking">
+                                <h3>Лог бронирования</h3>
+                                <div className='scroll'>
+                                    {booking.map((bookings) => (
+                                    <Bookings bookings={bookings}  key={bookings.id_booking}/>
+                                    ))}
+                                </div>
+                                
+                            </div>
                         <div className="info__order">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam et
-                        incidunt suscipit! Ea, natus. Veniam vero minus quis quo praesentium
-                        pariatur facilis? Illum omnis magni ab molestias exercitationem cum quod.
+                            <h3>Лог заказов</h3>
+                            <div className='scroll'>
+                            {order.map((orders) => (
+                                <Orders orders={orders} key={orders.id_order} />
+                            ))}
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

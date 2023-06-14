@@ -1,0 +1,10 @@
+.logged {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.logged p {
+    font-size: 17px;
+    margin-right: 4px;
+}

@@ -5,6 +5,7 @@ import numbersimg from '../../img/contacts-1@2x.png';
 import addressimg from '../../img/contacts-2@2x.png';
 import timeimg from '../../img/contacts-3@2x.png';
 import './Contacts.css';
+import MapYandex from './MapYandex';
 // import { YMaps, Map } from '@pbe/react-yandex-maps';
 
 const Contacts = () => {
@@ -45,11 +46,7 @@ const Contacts = () => {
                 </ul>
                 </div>
             </section>
-            {/* <YMaps>
-                <div className='mapYandex'>
-                    <Map defaultState={{ center: [54.50698270, 36.25487183], zoom: 18 }} />
-                </div>
-            </YMaps> */}
+            <MapYandex />
             </main>
             <Footer />
         </div>

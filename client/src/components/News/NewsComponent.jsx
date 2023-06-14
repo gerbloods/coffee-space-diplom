@@ -41,9 +41,6 @@ const NewsComponent = () => {
                     Ближайшую неделю в кофейне проходят скидки на кофе! При покупке 2 чашек латте, на выбор покупатель может выбрать
                     что возьмет, к выбору представлены: все виды сендвичей и салатов, кофе и фреш. Акция продлится до 16 июня.
                     </p>
-                    <div className="time__div">
-                    <span className='time'>09.06.2023</span>
-                    </div>
                     <div className="photoes">
                     <img className="img" src={firstimg} alt="" />
                     <img className="img" src={thirdimg} alt="" />

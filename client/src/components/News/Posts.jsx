@@ -10,9 +10,6 @@ const Posts = ({news}) => {
                     <h1>{news.name}</h1>
                     </div>
                     <p>{news.description}</p>
-                    <div className="time__div">
-                    <span className='time'>{news.createdAt}</span>
-                    </div>
                     <div className="photoes">
                     <img className="img" src={photo} alt="" />
                     </div>

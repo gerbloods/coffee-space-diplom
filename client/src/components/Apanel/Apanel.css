@@ -13,6 +13,10 @@
     width:50%;
     overflow:auto;
 }
+.scroll {
+	height: 300px;
+	overflow:auto;
+}
 .space {
     width: 100%;
     margin-top: 100px;

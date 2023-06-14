@@ -8,19 +8,32 @@ const Modal = ({active, setActive}) => {
     const [fio, setFio] = useState('')
     const [number, setNumber] = useState('')
     const [places, setPlaces] = useState('')
-    
+
+    const phoneRegex = /^((\+7|7|8)+([0-9]){10})$/;
+
+    const handleOrder = (fio, number, places) => {
+        if (!fio || !number.match(phoneRegex) || !places) {
+            alert("Пожалуйста, заполните корректно все обязательные поля");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     const entering = async () => {
             try {
-                const object = await reserveFunction(fio, number, places)
-                setActive(false)
-                console.log(object.message)
-                return (
-                    <div className='messageDiv'>
-                        <span className='textMessage'>{object.message}</span>
-                    </div>
-                )
+                if(handleOrder(fio, number, places) == true) {
+                    const object = await reserveFunction(fio, number, places)
+                    setActive(false)
+                    alert(object.message)
+                    return (
+                        <div className='messageDiv'>
+                            <span className='textMessage'>{object.message}</span>
+                        </div>
+                    )
+                }
             } catch (error) {
-                console.log(error)
+                alert('Неправильное заполнение данных')
             }
     }
 

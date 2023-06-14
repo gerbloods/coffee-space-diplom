@@ -17,21 +17,21 @@ const MenuComponent = () => {
                 <div className="drinks">
                 <span className="name__drink">Какао классический</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">160р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Клубничный спутник</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">190р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Созвездие кокоса</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">190р</span>
                 </div>
                 </div>
@@ -41,36 +41,36 @@ const MenuComponent = () => {
                 <div className="drinks">
                 <span className="name__drink">Черный / Сенча / Улун</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">130р / </span>
-                    <span className="ml__drink">1л</span>
+                    <span className="ml__drink">1л </span>
                     <span className="price__drink">230р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Грейпфрут-Вишня</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">180р / </span>
-                    <span className="ml__drink">1л</span>
+                    <span className="ml__drink">1л </span>
                     <span className="price__drink">330р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Сладкая облепиха</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">160р / </span>
-                    <span className="ml__drink">1л</span>
+                    <span className="ml__drink">1л </span>
                     <span className="price__drink">290р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Имбирь-Малина</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">170р / </span>
-                    <span className="ml__drink">1л</span>
+                    <span className="ml__drink">1л </span>
                     <span className="price__drink">310р</span>
                 </div>
                 </div>
@@ -80,21 +80,21 @@ const MenuComponent = () => {
                 <div className="drinks">
                 <span className="name__drink">Классический</span>
                 <div className="price">
-                    <span className="ml__drink">400мл</span>
+                    <span className="ml__drink">400мл </span>
                     <span className="price__drink">210р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Банановый</span>
                 <div className="price">
-                    <span className="ml__drink">400мл</span>
+                    <span className="ml__drink">400мл </span>
                     <span className="price__drink">240р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Клубничный</span>
                 <div className="price">
-                    <span className="ml__drink">400мл</span>
+                    <span className="ml__drink">400мл </span>
                     <span className="price__drink">240р</span>
                 </div>
                 </div>
@@ -104,7 +104,7 @@ const MenuComponent = () => {
                 <div className="drinks">
                 <span className="name__drink">Апельсин-Грейпфрут</span>
                 <div className="price">
-                    <span className="ml__drink">200мл</span>
+                    <span className="ml__drink">200мл </span>
                     <span className="price__drink">240р</span>
                 </div>
                 </div>
@@ -114,48 +114,48 @@ const MenuComponent = () => {
                 <div className="drinks">
                 <span className="name__drink">Эспрессо</span>
                 <div className="price">
-                    <span className="ml__drink">20мл</span>
+                    <span className="ml__drink">20мл </span>
                     <span className="price__drink">80р / </span>
-                    <span className="ml__drink">40мл</span>
+                    <span className="ml__drink">40мл </span>
                     <span className="price__drink">110р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Американо</span>
                 <div className="price">
-                    <span className="ml__drink">250мл</span>
+                    <span className="ml__drink">250мл </span>
                     <span className="price__drink">120р / </span>
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">140р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Латте</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">180р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Флет Уайт</span>
                 <div className="price">
-                    <span className="ml__drink">250мл</span>
+                    <span className="ml__drink">250мл </span>
                     <span className="price__drink">170р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Воронка</span>
                 <div className="price">
-                    <span className="ml__drink">250мл</span>
+                    <span className="ml__drink">250мл </span>
                     <span className="price__drink">180р / </span>
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">200р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Горячий шоколад</span>
                 <div className="price">
-                    <span className="ml__drink">250мл</span>
+                    <span className="ml__drink">250мл </span>
                     <span className="price__drink">180р</span>
                 </div>
                 </div>
@@ -165,28 +165,28 @@ const MenuComponent = () => {
                 <div className="drinks">
                 <span className="name__drink">Латте Чизкейк</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">230р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Планета Мокко</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">220р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Капитан Банан</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">220р</span>
                 </div>
                 </div>
                 <div className="drinks">
                 <span className="name__drink">Брусничный Американо</span>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">200р</span>
                 </div>
                 </div>
@@ -196,7 +196,7 @@ const MenuComponent = () => {
                     <span className="description__drink">Ваниль / Мед / Шоколад-Мята</span>
                 </div>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">220р</span>
                 </div>
                 </div>
@@ -206,7 +206,7 @@ const MenuComponent = () => {
                     <span className="description__drink">(Ореховая паста и халва)</span>
                 </div>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">220р</span>
                 </div>
                 </div>
@@ -216,7 +216,7 @@ const MenuComponent = () => {
                     <span className="description__drink">(С секретным ингридиентом)</span>
                 </div>
                 <div className="price">
-                    <span className="ml__drink">350мл</span>
+                    <span className="ml__drink">350мл </span>
                     <span className="price__drink">260р</span>
                 </div>
                 </div>

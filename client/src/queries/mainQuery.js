@@ -55,3 +55,13 @@ export const authFunction = async (admin, password) => {
 		return false
 	}
 }
+
+export const getOrderFunction = async () => {
+    const {data} = await $host.get('/api/order/getOrder')
+    return data
+}
+
+export const getBookingFunction = async () => {
+    const {data} = await $host.get('/api/booking/getBooking') 
+    return data
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { CONTACTS_ROUTE, MAIN_ROUTE } from '../../const';
+import { CONTACTS_ROUTE, MAIN_ROUTE, NEWS_ROUTE } from '../../const';
 import './Footer.css';
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
                     <NavLink to={MAIN_ROUTE}>Главная</NavLink>
                     </li>
                     <li>
-                    <NavLink to={MAIN_ROUTE}>О нас</NavLink>
+                    <NavLink to={NEWS_ROUTE}>Новости</NavLink>
                     </li>
                     <li>
                     <NavLink to={CONTACTS_ROUTE}>Контакты</NavLink>

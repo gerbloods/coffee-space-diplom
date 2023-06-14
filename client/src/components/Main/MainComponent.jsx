@@ -9,8 +9,9 @@ import secondimg from '../../img/work/2.webp';
 import thirdimg from '../../img/work/3.webp';
 import Footer from '../Footer/Footer';
 
-
 const MainComponent = () => {
+
+    
     return (
         <div>
             <Header />
@@ -21,7 +22,7 @@ const MainComponent = () => {
                 </section>
                 <section className="gallery">
                 <div className="gallery-left">
-                    <img className="gallery-item" id="about" src={firstimg} alt=""/>
+                    <img className="gallery-item" src={firstimg} alt=""/>
                     <p className="text-block-p-left">
                     Мы с любовью подходим к созданию каждого напитка, используя только
                     натуральные ингредиенты. Не боимся новых сочетаний, которые отправляют
@@ -39,7 +40,7 @@ const MainComponent = () => {
                     <img className="gallery-item" src={eightimg} alt="" />
                 </div>
                 <div className="gallery-right">
-                    <h2 className="text-block-head">Что мы знаем о космосе?</h2>
+                    <h2 className="text-block-head" id='about'>Что мы знаем о космосе?</h2>
                     <p className="text-block-p-right">
                     Калуга – «колыбель космонавтики», родина известных умов. Земля с
                     большим историческим наследием. Эти факты мы учитывали, создавая для

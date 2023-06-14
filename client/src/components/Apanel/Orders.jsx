@@ -3,7 +3,7 @@ import React from 'react';
 const Orders = ({orders}) => {
     return (
         <div className='logged'>
-           
+                <p>id: {orders.id_order}</p>
                 <p>ФИО: {orders.fio}</p>
                 <p>Номер покупателя: {orders.number}</p>
                 <p>Заказ: {orders.order}</p>

@@ -4,7 +4,7 @@ import './Bookings.css'
 const Bookings = ({bookings}) => {
     return (
         <div className='logged'>
-           
+                <p>id: {bookings.id_booking}</p>
                 <p>ФИО: {bookings.fio}</p>
                 <p>Номер покупателя: {bookings.number}</p>
                 <p>Количество мест: {bookings.places}</p>

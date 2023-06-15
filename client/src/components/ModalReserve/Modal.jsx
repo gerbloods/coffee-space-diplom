@@ -23,7 +23,7 @@ const Modal = ({active, setActive}) => {
 
     const entering = async () => {
             try {
-                if(handleOrder(fio, number, places) === true) {
+                if(handleOrder(fio, number, places) === true && places >= 1) {
                     const object = await reserveFunction(fio, number, places)
                     setActive(false)
                     alert(object.message)
@@ -32,6 +32,8 @@ const Modal = ({active, setActive}) => {
                             <span className='textMessage'>{object.message}</span>
                         </div>
                     )
+                } else {
+                    alert('Неправильное заполнение данных')
                 }
             } catch (error) {
                 alert('Неправильное заполнение данных')
